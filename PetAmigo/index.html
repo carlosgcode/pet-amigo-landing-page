@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Amigo</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <!-- overlay do modal -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ================= MODAL DE AGENDAMENTO ================= -->
+    <div class="modal" id="modalAgendar">
+
+      <button class="fechar" id="fecharModal">X</button>
+
+      <h2>Agendar atendimento</h2>
+
+      <p>Fala com a gente rapidinho 🐾</p>
+
+      <input type="text" id="agendaNome" placeholder="Seu nome" />
+      <input type="text" id="agendaPet" placeholder="Nome do pet" />
+
+      <input type="tel" id="agendaTelefone" placeholder="Telefone / WhatsApp" />
+
+      <select id="agendaServico">
+        <option value="">Tipo de serviço</option>
+        <option value="banho">Banho & Tosa</option>
+        <option value="consulta">Consulta veterinária</option>
+        <option value="produtos">Retirada de produtos</option>
+      </select>
+
+      <input type="date" id="agendaData" />
+
+      <textarea id="agendaObs" placeholder="Observações (opcional)"></textarea>
+
+      <button class="btn-modal" id="btnSolicitarAgendamento">Solicitar agendamento</button>
+
+      <p id="agendaStatus"></p>
+
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header class="cabecalho">
+
+      <a href="#inicio" class="logo">
+        <h1>Pet Amigo</h1>
+      </a>
+
+      <nav class="cabecalho-links">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+        <a id="header_CTA_agendar" href="#">Agendar</a>
+      </nav>
+
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+
+      <div class="hero-texto">
+        <h1 id="titulo_hero">Seu pet merece todo o carinho</h1>
+
+        <p>
+          Cuidamos do seu pet como parte da família, com atenção simples e verdadeira.
+        </p>
+
+        <a href="#servicos" class="botao-cta">Ver serviços</a>
+      </div>
+
+      <div class="hero-imagem">
+        <div class="circulo-fundo"></div>
+        <img src="./img/pet_hero.jpg" alt="Cachorro feliz sendo carinhosamente segurado" />
+      </div>
+
+    </section>
+
+    <!-- SOBRE -->
+    <section class="sobre" id="sobre">
+
+      <div class="sobre-conteudo">
+
+        <div class="sobre-texto">
+          <h2>Sobre nós</h2>
+
+          <p>
+            Somos um pet shop familiar que acredita no cuidado simples, humano e de confiança.
+          </p>
+
+          <p>
+            Nosso foco é deixar cada animal confortável e seguro.
+          </p>
+        </div>
+
+        <div class="sobre-imagem">
+          <img src="./img/pet-feliz.jpg" alt="Pet feliz brincando" />
+        </div>
+
+      </div>
+
+      <div class="sobre-indicadores">
+
+        <div class="indicador">
+          <h3>+2500</h3>
+          <p>Atendimentos</p>
+        </div>
+
+        <div class="indicador">
+          <h3>+8 anos</h3>
+          <p>de cuidado</p>
+        </div>
+
+        <div class="indicador">
+          <h3>98%</h3>
+          <p>satisfação</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="servicos" id="servicos">
+
+      <h2>Nossos Serviços</h2>
+
+      <div class="servicos-cards">
+
+        <div class="card">
+          <div class="card-img">
+            <img src="./img/banho.jpg" alt="Cachorro tomando banho" />
+          </div>
+          <h3>Banho & Tosa</h3>
+          <p>Banho relaxante e tosa na medida certa para o seu melhor amigo.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img src="./img/vet.jpg" alt="Veterinário examinando um gato" />
+          </div>
+          <h3>Consultas</h3>
+          <p>Atendimento veterinário completo, do check-up de rotina às urgências.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img src="./img/produtos.jpg" alt="Produtos e acessórios para pets" />
+          </div>
+          <h3>Produtos</h3>
+          <p>Rações, brinquedos e acessórios selecionados para o dia a dia do seu pet.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contato" id="contato">
+
+      <h2>Contato</h2>
+
+      <form id="formContato" novalidate>
+        <input type="text" id="nome" placeholder="Seu nome" required />
+        <input type="email" id="email" placeholder="Seu e-mail" required />
+        <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <p id="mensagemStatus"></p>
+
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
