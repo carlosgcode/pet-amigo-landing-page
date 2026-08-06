@@ -73,7 +73,7 @@ equipe que não chegou a ser implementada).
 ## 4. Estrutura de arquivos
 
 ```
-pet-amigo/
+./
 ├── index.html
 ├── style.css
 ├── script.js
