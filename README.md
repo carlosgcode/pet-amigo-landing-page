@@ -27,6 +27,8 @@ acolhimento e cuidado, associados ao universo pet. A tipografia combina uma font
 customizada (Dynamo) para títulos e identidade da marca, com Arial/Helvetica para
 textos de leitura corrida.
 
+As imagens utilizadas na interface foram selecionadas como placeholders visuais, com o único objetivo de composição estética e validação do layout da página. Nenhuma imagem é de autoria própria, sendo todas utilizadas apenas para fins educacionais e de estudo de front-end, sem intenção comercial. A escolha foi feita priorizando harmonia visual e contexto com a temática de pets, respeitando o caráter acadêmico do projeto.
+
 ## 3. Descrição das etapas de desenvolvimento
 
 O desenvolvimento foi dividido em três camadas, seguindo a estrutura pedida pelo
