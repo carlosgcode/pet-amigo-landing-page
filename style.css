@@ -18,10 +18,18 @@ body {
 
     /* Compensa a altura do header fixo para não sobrepor o conteúdo */
     padding-top: 90px;
+
+    /* Evita scroll horizontal causado por qualquer elemento que ainda estoure a largura */
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* ================= HEADER ================= */
@@ -159,6 +167,9 @@ a {
 
 .hero-imagem {
     position: relative;
+
+    /* Impede que a imagem + círculo decorativo estourem a largura em telas médias */
+    flex-shrink: 0;
 }
 
 /* Círculo decorativo posicionado atrás da imagem de destaque */
@@ -434,4 +445,119 @@ a {
     font-size: 18px;
 
     cursor: pointer;
+}
+
+/* ================= RESPONSIVO (TABLET) ================= */
+
+@media (max-width: 992px) {
+    .hero-imagem img,
+    .sobre-imagem img {
+        width: 280px;
+    }
+
+    .circulo-fundo {
+        width: 260px;
+        height: 260px;
+    }
+
+    #titulo_hero {
+        font-size: 2.4rem;
+    }
+}
+
+/* ================= RESPONSIVO (MOBILE) ================= */
+
+@media (max-width: 768px) {
+
+    body {
+        /* O header passa a empilhar (fica mais alto), então aumenta o respiro */
+        padding-top: 140px;
+    }
+
+    .cabecalho {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 6%;
+    }
+
+    .cabecalho-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+    .hero,
+    .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 6%;
+    }
+
+    .sobre-conteudo {
+        padding: 0;
+    }
+
+    .hero-texto,
+    .sobre-texto {
+        max-width: 100%;
+    }
+
+    .hero-texto {
+        margin-bottom: 40px;
+    }
+
+    .hero-imagem img,
+    .sobre-imagem img {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .circulo-fundo {
+        width: 220px;
+        height: 220px;
+        top: 10px;
+        left: 10px;
+    }
+
+    #titulo_hero {
+        font-size: 2rem;
+    }
+
+    .sobre,
+    .servicos,
+    .contato {
+        padding: 50px 6%;
+    }
+
+    .sobre-indicadores {
+        flex-direction: column;
+    }
+
+    .servicos-cards {
+        flex-direction: column;
+    }
+
+    .modal {
+        width: 90%;
+        max-width: 320px;
+    }
+}
+
+/* ================= RESPONSIVO (TELAS BEM PEQUENAS) ================= */
+
+@media (max-width: 400px) {
+    #titulo_hero {
+        font-size: 1.7rem;
+    }
+
+    .sobre-texto h2,
+    .servicos h2,
+    .contato h2 {
+        font-size: 2rem;
+    }
+
+    .cabecalho-links {
+        gap: 10px 14px;
+        font-size: 0.9rem;
+    }
 }
